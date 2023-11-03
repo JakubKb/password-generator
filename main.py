@@ -1,6 +1,14 @@
 import random
 
-password_length = int(input("How many characters would you like? "))
+while True:
+    password_length = input("How many characters would you like? ")
+    if not password_length.isdigit():
+        print("Please enter a valid number for password length.")
+    else:
+        password_length = int(password_length)
+        break
+
+
 includes_chars = input("Do you want normal characters? (yes/no) ")
 includes_special_chars = input("Do you want special characters? (yes/no) ")
 includes_numbers = input("Do you want numbers? (yes/no) ")
@@ -8,7 +16,7 @@ basic_chars = 'qwertyuiopasdfghjklzxcvbnm'
 numbers = '1234567890'
 special_chars = '~!@#$%^&*()_+{}|:"<>?-=[]\;.,'
 password = ""
-
+0
 
 for x in range(password_length):
     char_set = ""
